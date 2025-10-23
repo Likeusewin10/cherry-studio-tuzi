@@ -69,24 +69,34 @@ import { TOKENFLUX_HOST } from './constant'
 import { glm45FlashModel, qwen38bModel, SYSTEM_MODELS } from './models'
 
 export const CHERRYAI_PROVIDER: SystemProvider = {
-  id: 'tuzi',
-  name: 'TuZi',
+  id: 'tuzi-default',
+  name: '兔子-default',
   type: 'openai',
   apiKey: '',
   apiHost: 'https://api.tu-zi.com',
-  models: SYSTEM_MODELS.tuzi || [],
+  models: SYSTEM_MODELS['tuzi-default'] || [],
   isSystem: true,
   enabled: true
 }
 
 export const SYSTEM_PROVIDERS_CONFIG: Record<SystemProviderId, SystemProvider> = {
-  tuzi: {
-    id: 'tuzi',
-    name: 'TuZi',
+  'tuzi-default': {
+    id: 'tuzi-default',
+    name: '兔子-default',
     type: 'openai',
     apiKey: '',
     apiHost: 'https://api.tu-zi.com',
-    models: SYSTEM_MODELS.tuzi || [],
+    models: SYSTEM_MODELS['tuzi-default'] || [],
+    isSystem: true,
+    enabled: true
+  },
+  'tuzi-original': {
+    id: 'tuzi-original',
+    name: '兔子-原价',
+    type: 'openai',
+    apiKey: '',
+    apiHost: 'https://api.tu-zi.com',
+    models: SYSTEM_MODELS['tuzi-original'] || [],
     isSystem: true,
     enabled: true
   },
@@ -665,10 +675,14 @@ export const SYSTEM_PROVIDERS_CONFIG: Record<SystemProviderId, SystemProvider> =
   }
 } as const
 
-export const SYSTEM_PROVIDERS: SystemProvider[] = [SYSTEM_PROVIDERS_CONFIG.tuzi]
+export const SYSTEM_PROVIDERS: SystemProvider[] = [
+  SYSTEM_PROVIDERS_CONFIG['tuzi-default'],
+  SYSTEM_PROVIDERS_CONFIG['tuzi-original']
+]
 
 export const PROVIDER_LOGO_MAP: AtLeast<SystemProviderId, string> = {
-  tuzi: OpenAiProviderLogo,
+  'tuzi-default': OpenAiProviderLogo,
+  'tuzi-original': OpenAiProviderLogo,
   cherryin: CherryInProviderLogo,
   ph8: Ph8ProviderLogo,
   '302ai': Ai302ProviderLogo,
@@ -751,7 +765,18 @@ type ProviderUrls = {
 }
 
 export const PROVIDER_URLS: Record<SystemProviderId, ProviderUrls> = {
-  tuzi: {
+  'tuzi-default': {
+    api: {
+      url: 'https://api.tu-zi.com'
+    },
+    websites: {
+      official: 'https://api.tu-zi.com',
+      apiKey: 'https://api.tu-zi.com',
+      docs: 'https://api.tu-zi.com',
+      models: 'https://api.tu-zi.com'
+    }
+  },
+  'tuzi-original': {
     api: {
       url: 'https://api.tu-zi.com'
     },

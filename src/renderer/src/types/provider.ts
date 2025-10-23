@@ -107,7 +107,8 @@ export type Provider = {
 }
 
 export const SystemProviderIds = {
-  tuzi: 'tuzi',
+  'tuzi-default': 'tuzi-default',
+  'tuzi-original': 'tuzi-original',
   cherryin: 'cherryin',
   silicon: 'silicon',
   aihubmix: 'aihubmix',

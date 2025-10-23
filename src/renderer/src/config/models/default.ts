@@ -1,16 +1,16 @@
 import { Model, SystemProviderId } from '@renderer/types'
 
 export const glm45FlashModel: Model = {
-  id: 'gpt-4o-mini',
-  name: 'GPT-4o-mini',
-  provider: 'tuzi',
+  id: 'glm-4.5-flash',
+  name: 'glm-4.5-flash',
+  provider: 'tuzi-default',
   group: 'OpenAI'
 }
 
 export const qwen38bModel: Model = {
-  id: 'gpt-4o-mini',
-  name: 'GPT-4o-mini',
-  provider: 'tuzi',
+  id: 'qwen3-8b',
+  name: 'qwen3-8b',
+  provider: 'tuzi-default',
   group: 'OpenAI'
 }
 
@@ -1838,29 +1838,55 @@ export const SYSTEM_MODELS: Record<SystemProviderId | 'defaultModel', Model[]> =
       group: 'LongCat'
     }
   ],
-  tuzi: [
+  'tuzi-default': [
     {
       id: 'gpt-4o',
       name: 'GPT-4o',
-      provider: 'tuzi',
+      provider: 'tuzi-default',
       group: 'OpenAI'
     },
     {
       id: 'gpt-4o-mini',
       name: 'GPT-4o-mini',
-      provider: 'tuzi',
+      provider: 'tuzi-default',
       group: 'OpenAI'
     },
     {
       id: 'deepseek-chat',
       name: 'DeepSeek Chat',
-      provider: 'tuzi',
+      provider: 'tuzi-default',
       group: 'DeepSeek'
     },
     {
       id: 'claude-3-5-sonnet-20241022',
       name: 'Claude 3.5 Sonnet',
-      provider: 'tuzi',
+      provider: 'tuzi-default',
+      group: 'Claude'
+    }
+  ],
+  'tuzi-original': [
+    {
+      id: 'gpt-4o',
+      name: 'GPT-4o',
+      provider: 'tuzi-original',
+      group: 'OpenAI'
+    },
+    {
+      id: 'gpt-4o-mini',
+      name: 'GPT-4o-mini',
+      provider: 'tuzi-original',
+      group: 'OpenAI'
+    },
+    {
+      id: 'deepseek-chat',
+      name: 'DeepSeek Chat',
+      provider: 'tuzi-original',
+      group: 'DeepSeek'
+    },
+    {
+      id: 'claude-3-5-sonnet-20241022',
+      name: 'Claude 3.5 Sonnet',
+      provider: 'tuzi-original',
       group: 'Claude'
     }
   ]
