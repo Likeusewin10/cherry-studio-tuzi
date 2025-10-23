@@ -771,9 +771,9 @@ export const PROVIDER_URLS: Record<SystemProviderId, ProviderUrls> = {
     },
     websites: {
       official: 'https://api.tu-zi.com',
-      apiKey: 'https://api.tu-zi.com',
-      docs: 'https://api.tu-zi.com',
-      models: 'https://api.tu-zi.com'
+      apiKey: 'https://api.tu-zi.com/token',
+      docs: 'https://wiki.tu-zi.com',
+      models: 'https://api.tu-zi.com/pricing'
     }
   },
   'tuzi-original': {
@@ -782,9 +782,9 @@ export const PROVIDER_URLS: Record<SystemProviderId, ProviderUrls> = {
     },
     websites: {
       official: 'https://api.tu-zi.com',
-      apiKey: 'https://api.tu-zi.com',
-      docs: 'https://api.tu-zi.com',
-      models: 'https://api.tu-zi.com'
+      apiKey: 'https://api.tu-zi.com/token',
+      docs: 'https://wiki.tu-zi.com',
+      models: 'https://api.tu-zi.com/pricing'
     }
   },
   cherryin: {
