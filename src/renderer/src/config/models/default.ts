@@ -1840,8 +1840,8 @@ export const SYSTEM_MODELS: Record<SystemProviderId | 'defaultModel', Model[]> =
   ],
   'tuzi-default': [
     {
-      id: 'gpt-4o',
-      name: 'GPT-4o',
+      id: 'chatgpt-4o-latest',
+      name: 'ChatGPT-4o Latest',
       provider: 'tuzi-default',
       group: 'OpenAI'
     },
@@ -1852,8 +1852,32 @@ export const SYSTEM_MODELS: Record<SystemProviderId | 'defaultModel', Model[]> =
       group: 'OpenAI'
     },
     {
+      id: 'gpt-4.1',
+      name: 'GPT-4.1',
+      provider: 'tuzi-default',
+      group: 'OpenAI'
+    },
+    {
+      id: 'gpt-4.1-mini',
+      name: 'GPT-4.1 Mini',
+      provider: 'tuzi-default',
+      group: 'OpenAI'
+    },
+    {
+      id: 'gpt-4.1-nano',
+      name: 'GPT-4.1 Nano',
+      provider: 'tuzi-default',
+      group: 'OpenAI'
+    },
+    {
       id: 'deepseek-chat',
       name: 'DeepSeek Chat',
+      provider: 'tuzi-default',
+      group: 'DeepSeek'
+    },
+    {
+      id: 'deepseek-v3-250324',
+      name: 'DeepSeek V3',
       provider: 'tuzi-default',
       group: 'DeepSeek'
     },
@@ -1862,12 +1886,18 @@ export const SYSTEM_MODELS: Record<SystemProviderId | 'defaultModel', Model[]> =
       name: 'Claude 3.5 Sonnet',
       provider: 'tuzi-default',
       group: 'Claude'
+    },
+    {
+      id: 'claude-sonnet-4-5-20250929',
+      name: 'Claude Sonnet 4.5',
+      provider: 'tuzi-default',
+      group: 'Claude'
     }
   ],
   'tuzi-original': [
     {
-      id: 'gpt-4o',
-      name: 'GPT-4o',
+      id: 'chatgpt-4o-latest',
+      name: 'ChatGPT-4o Latest',
       provider: 'tuzi-original',
       group: 'OpenAI'
     },
@@ -1878,14 +1908,62 @@ export const SYSTEM_MODELS: Record<SystemProviderId | 'defaultModel', Model[]> =
       group: 'OpenAI'
     },
     {
+      id: 'gpt-4.1',
+      name: 'GPT-4.1',
+      provider: 'tuzi-original',
+      group: 'OpenAI'
+    },
+    {
+      id: 'gpt-4.1-mini',
+      name: 'GPT-4.1 Mini',
+      provider: 'tuzi-original',
+      group: 'OpenAI'
+    },
+    {
+      id: 'gpt-4.1-nano',
+      name: 'GPT-4.1 Nano',
+      provider: 'tuzi-original',
+      group: 'OpenAI'
+    },
+    {
+      id: 'gpt-5-chat-latest',
+      name: 'GPT-5 Chat Latest',
+      provider: 'tuzi-original',
+      group: 'OpenAI'
+    },
+    {
+      id: 'gpt-5-nano',
+      name: 'GPT-5 Nano',
+      provider: 'tuzi-original',
+      group: 'OpenAI'
+    },
+    {
+      id: 'gpt-5-mini',
+      name: 'GPT-5 Mini',
+      provider: 'tuzi-original',
+      group: 'OpenAI'
+    },
+    {
       id: 'deepseek-chat',
       name: 'DeepSeek Chat',
       provider: 'tuzi-original',
       group: 'DeepSeek'
     },
     {
+      id: 'deepseek-v3-250324',
+      name: 'DeepSeek V3',
+      provider: 'tuzi-original',
+      group: 'DeepSeek'
+    },
+    {
       id: 'claude-3-5-sonnet-20241022',
       name: 'Claude 3.5 Sonnet',
+      provider: 'tuzi-original',
+      group: 'Claude'
+    },
+    {
+      id: 'claude-sonnet-4-5-20250929',
+      name: 'Claude Sonnet 4.5',
       provider: 'tuzi-original',
       group: 'Claude'
     }

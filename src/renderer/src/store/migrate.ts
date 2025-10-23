@@ -2678,7 +2678,7 @@ const migrateConfig = {
   '163': (state: RootState) => {
     try {
       addOcrProvider(state, BUILTIN_OCR_PROVIDERS_MAP.ovocr)
-      state.llm.providers.forEach((provider) => {
+      state.llm.providers.forEach ((provider) => {
         if (provider.id === 'cherryin') {
           provider.anthropicApiHost = 'https://open.cherryin.net'
         }
@@ -2687,6 +2687,38 @@ const migrateConfig = {
       return state
     } catch (error) {
       logger.error('migrate 163 error', error as Error)
+      return state
+    }
+  },
+  '164': (state: RootState) => {
+    try {
+      // Update default models with old 'tuzi' provider to 'tuzi-default'
+      const updateModelProvider = (model?: Model) => {
+        if (model && model.provider === 'tuzi') {
+          model.provider = 'tuzi-default'
+        }
+      }
+
+      // Update all default models in llm state
+      updateModelProvider(state.llm.defaultModel)
+      updateModelProvider(state.llm.topicNamingModel)
+      updateModelProvider(state.llm.quickModel)
+      updateModelProvider(state.llm.translateModel)
+
+      // Update models in assistants
+      if (state.assistants) {
+        updateModelProvider(state.assistants.defaultAssistant.model)
+        updateModelProvider(state.assistants.defaultAssistant.defaultModel)
+
+        state.assistants.assistants?.forEach((assistant) => {
+          updateModelProvider(assistant.model)
+          updateModelProvider(assistant.defaultModel)
+        })
+      }
+
+      return state
+    } catch (error) {
+      logger.error('migrate 164 error', error as Error)
       return state
     }
   }
