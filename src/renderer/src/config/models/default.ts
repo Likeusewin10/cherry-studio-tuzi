@@ -1,17 +1,17 @@
 import { Model, SystemProviderId } from '@renderer/types'
 
 export const glm45FlashModel: Model = {
-  id: 'glm-4.5-flash',
-  name: 'GLM-4.5-Flash',
-  provider: 'cherryai',
-  group: 'GLM-4.5'
+  id: 'gpt-4o-mini',
+  name: 'GPT-4o-mini',
+  provider: 'tuzi',
+  group: 'OpenAI'
 }
 
 export const qwen38bModel: Model = {
-  id: 'Qwen/Qwen3-8B',
-  name: 'Qwen3-8B',
-  provider: 'cherryai',
-  group: 'Qwen'
+  id: 'gpt-4o-mini',
+  name: 'GPT-4o-mini',
+  provider: 'tuzi',
+  group: 'OpenAI'
 }
 
 export const SYSTEM_MODELS: Record<SystemProviderId | 'defaultModel', Model[]> = {

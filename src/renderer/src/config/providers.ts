@@ -69,13 +69,12 @@ import { TOKENFLUX_HOST } from './constant'
 import { glm45FlashModel, qwen38bModel, SYSTEM_MODELS } from './models'
 
 export const CHERRYAI_PROVIDER: SystemProvider = {
-  id: 'cherryai' as SystemProviderId,
-  name: 'CherryAI',
+  id: 'tuzi',
+  name: 'TuZi',
   type: 'openai',
   apiKey: '',
-  apiHost: 'https://api.cherry-ai.com/',
-  anthropicApiHost: 'https://api.cherry-ai.com',
-  models: [glm45FlashModel, qwen38bModel],
+  apiHost: 'https://api.tu-zi.com',
+  models: SYSTEM_MODELS.tuzi || [],
   isSystem: true,
   enabled: true
 }
