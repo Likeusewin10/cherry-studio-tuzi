@@ -97,11 +97,14 @@ function addProvider(state: RootState, id: string) {
 
 // Fix missing provider
 function fixMissingProvider(state: RootState) {
-  SYSTEM_PROVIDERS.forEach((p) => {
-    if (!state.llm.providers.find((provider) => provider.id === p.id)) {
-      state.llm.providers.push(p)
-    }
-  })
+  // Only add tuzi provider
+  const tuziProvider = SYSTEM_PROVIDERS.find((p) => p.id === 'tuzi')
+  if (tuziProvider && !state.llm.providers.find((provider) => provider.id === 'tuzi')) {
+    state.llm.providers.push(tuziProvider)
+  }
+
+  // Remove all other providers except tuzi
+  state.llm.providers = state.llm.providers.filter((provider) => provider.id === 'tuzi')
 }
 
 // add ocr provider

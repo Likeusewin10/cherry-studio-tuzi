@@ -81,6 +81,16 @@ export const CHERRYAI_PROVIDER: SystemProvider = {
 }
 
 export const SYSTEM_PROVIDERS_CONFIG: Record<SystemProviderId, SystemProvider> = {
+  tuzi: {
+    id: 'tuzi',
+    name: 'TuZi',
+    type: 'openai',
+    apiKey: '',
+    apiHost: 'https://api.tu-zi.com',
+    models: SYSTEM_MODELS.tuzi || [],
+    isSystem: true,
+    enabled: true
+  },
   cherryin: {
     id: 'cherryin',
     name: 'CherryIN',
@@ -90,7 +100,7 @@ export const SYSTEM_PROVIDERS_CONFIG: Record<SystemProviderId, SystemProvider> =
     anthropicApiHost: 'https://open.cherryin.net',
     models: [],
     isSystem: true,
-    enabled: true
+    enabled: false
   },
   silicon: {
     id: 'silicon',
@@ -656,9 +666,10 @@ export const SYSTEM_PROVIDERS_CONFIG: Record<SystemProviderId, SystemProvider> =
   }
 } as const
 
-export const SYSTEM_PROVIDERS: SystemProvider[] = Object.values(SYSTEM_PROVIDERS_CONFIG)
+export const SYSTEM_PROVIDERS: SystemProvider[] = [SYSTEM_PROVIDERS_CONFIG.tuzi]
 
 export const PROVIDER_LOGO_MAP: AtLeast<SystemProviderId, string> = {
+  tuzi: OpenAiProviderLogo,
   cherryin: CherryInProviderLogo,
   ph8: Ph8ProviderLogo,
   '302ai': Ai302ProviderLogo,
@@ -741,6 +752,17 @@ type ProviderUrls = {
 }
 
 export const PROVIDER_URLS: Record<SystemProviderId, ProviderUrls> = {
+  tuzi: {
+    api: {
+      url: 'https://api.tu-zi.com'
+    },
+    websites: {
+      official: 'https://api.tu-zi.com',
+      apiKey: 'https://api.tu-zi.com',
+      docs: 'https://api.tu-zi.com',
+      models: 'https://api.tu-zi.com'
+    }
+  },
   cherryin: {
     api: {
       url: 'https://open.cherryin.net'

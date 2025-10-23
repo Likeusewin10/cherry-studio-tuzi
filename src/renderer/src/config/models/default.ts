@@ -1837,5 +1837,31 @@ export const SYSTEM_MODELS: Record<SystemProviderId | 'defaultModel', Model[]> =
       provider: 'longcat',
       group: 'LongCat'
     }
+  ],
+  tuzi: [
+    {
+      id: 'gpt-4o',
+      name: 'GPT-4o',
+      provider: 'tuzi',
+      group: 'OpenAI'
+    },
+    {
+      id: 'gpt-4o-mini',
+      name: 'GPT-4o-mini',
+      provider: 'tuzi',
+      group: 'OpenAI'
+    },
+    {
+      id: 'deepseek-chat',
+      name: 'DeepSeek Chat',
+      provider: 'tuzi',
+      group: 'DeepSeek'
+    },
+    {
+      id: 'claude-3-5-sonnet-20241022',
+      name: 'Claude 3.5 Sonnet',
+      provider: 'tuzi',
+      group: 'Claude'
+    }
   ]
 }
