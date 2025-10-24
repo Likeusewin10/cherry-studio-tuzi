@@ -53,6 +53,7 @@ import DeepSeekProviderLogo from '@renderer/assets/images/providers/deepseek.png
 import GroqProviderLogo from '@renderer/assets/images/providers/groq.png?url'
 import OpenAiProviderLogo from '@renderer/assets/images/providers/openai.png?url'
 import SiliconFlowProviderLogo from '@renderer/assets/images/providers/silicon.png?url'
+import TuziProviderLogo from '@renderer/assets/images/providers/tuzi.png?url'
 import ZhipuProviderLogo from '@renderer/assets/images/providers/zhipu.png?url'
 import i18n from '@renderer/i18n'
 import { MinAppType } from '@renderer/types'
@@ -88,6 +89,13 @@ const loadCustomMiniApp = async (): Promise<MinAppType[]> => {
 
 // 初始化默认小应用
 const ORIGIN_DEFAULT_MIN_APPS: MinAppType[] = [
+  {
+    id: 'tuzi',
+    name: '兔子',
+    url: 'https://share.tu-zi.com/',
+    logo: TuziProviderLogo,
+    bodered: true
+  },
   {
     id: 'openai',
     name: 'ChatGPT',
