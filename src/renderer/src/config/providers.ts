@@ -1,6 +1,7 @@
 import ZhinaoProviderLogo from '@renderer/assets/images/models/360.png'
 import HunyuanProviderLogo from '@renderer/assets/images/models/hunyuan.png'
 import AzureProviderLogo from '@renderer/assets/images/models/microsoft.png'
+import TuziProviderLogo from '@renderer/assets/images/providers/tuzi.png'
 import Ai302ProviderLogo from '@renderer/assets/images/providers/302ai.webp'
 import AiHubMixProviderLogo from '@renderer/assets/images/providers/aihubmix.webp'
 import AiOnlyProviderLogo from '@renderer/assets/images/providers/aiOnly.webp'
@@ -681,8 +682,8 @@ export const SYSTEM_PROVIDERS: SystemProvider[] = [
 ]
 
 export const PROVIDER_LOGO_MAP: AtLeast<SystemProviderId, string> = {
-  'tuzi-default': OpenAiProviderLogo,
-  'tuzi-original': OpenAiProviderLogo,
+  'tuzi-default': TuziProviderLogo,
+  'tuzi-original': TuziProviderLogo,
   cherryin: CherryInProviderLogo,
   ph8: Ph8ProviderLogo,
   '302ai': Ai302ProviderLogo,
