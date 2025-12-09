@@ -1870,6 +1870,12 @@ export const SYSTEM_MODELS: Record<SystemProviderId | 'defaultModel', Model[]> =
       group: 'OpenAI'
     },
     {
+      id: 'nano-banana-2',
+      name: 'Nano Banana 2',
+      provider: 'tuzi-default',
+      group: 'Image'
+    },
+    {
       id: 'deepseek-chat',
       name: 'DeepSeek Chat',
       provider: 'tuzi-default',

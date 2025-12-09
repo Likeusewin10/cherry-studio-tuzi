@@ -84,13 +84,14 @@ export const IMAGE_ENHANCEMENT_MODELS = [
   'qwen-image-edit',
   'gpt-image-1',
   'gemini-2.5-flash-image',
-  'gemini-2.0-flash-preview-image-generation'
+  'gemini-2.0-flash-preview-image-generation',
+  'nano-banana-2'
 ]
 
 const IMAGE_ENHANCEMENT_MODELS_REGEX = new RegExp(IMAGE_ENHANCEMENT_MODELS.join('|'), 'i')
 
 // Models that should auto-enable image generation button when selected
-export const AUTO_ENABLE_IMAGE_MODELS = ['gemini-2.5-flash-image', ...DEDICATED_IMAGE_MODELS]
+export const AUTO_ENABLE_IMAGE_MODELS = ['gemini-2.5-flash-image', 'nano-banana-2', ...DEDICATED_IMAGE_MODELS]
 
 export const OPENAI_TOOL_USE_IMAGE_GENERATION_MODELS = [
   'o3',
@@ -109,6 +110,7 @@ export const GENERATE_IMAGE_MODELS = [
   'gemini-2.0-flash-exp-image-generation',
   'gemini-2.0-flash-preview-image-generation',
   'gemini-2.5-flash-image',
+  'nano-banana-2',
   ...DEDICATED_IMAGE_MODELS
 ]
 
@@ -169,7 +171,7 @@ export function isPureGenerateImageModel(model: Model): boolean {
 }
 
 // Text to image models
-export const TEXT_TO_IMAGE_REGEX = /flux|diffusion|stabilityai|sd-|dall|cogview|janus|midjourney|mj-|image|gpt-image/i
+export const TEXT_TO_IMAGE_REGEX = /flux|diffusion|stabilityai|sd-|dall|cogview|janus|midjourney|mj-|image|gpt-image|nano-banana/i
 
 export function isTextToImageModel(model: Model): boolean {
   const modelId = getLowerBaseModelName(model.id)
